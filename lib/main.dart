@@ -2,7 +2,7 @@
  * Parou em perfil, por backgroud no home tbm, arrumar os controllers
  * simplificar o codigo, e terminar de fazer,
  * pesquisar sobre se conectar ao banco e salvar o estado
- * ver de deletar tbm
+ * ver de deletar tbm e pesquisar
 */
 
 import 'package:flutter/material.dart';

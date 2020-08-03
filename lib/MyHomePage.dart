@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ifit_app/Perfil.dart';
-import 'CardComida.dart';
-import 'NewReceita.dart';
+import 'package:ifit_app/components/NewDrawer.dart';
+import 'components/CardComida.dart';
+import 'components/NewReceita.dart';
 
 // FAZER OS CONTROLERS E ARRUMAR O COD.
 class MyHomePage extends StatefulWidget {
@@ -17,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomAppBar(
-          child: Row(
+       child: Row(
         children: [
           Spacer(),
           IconButton(
@@ -31,36 +31,20 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            Container(
-              height: 100.0,
-              child: DrawerHeader(
-                child: Text(
-                  'IFit - Home',
-                  style: TextStyle(
-                    fontFamily: 'NotoSans',
-                    fontSize: 24,
-                  ),
-                ),
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.person),
-              title: Text('Perfil'),
-              onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Perfil()));
-              },
-            ),
-          ],
-        ),
+        child: NewDrawer(),
       ),
-      body: Column(children: <Widget>[
-        new CardComida(),
-        new CardComidaTwo(),
-      ]),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/backgroud.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Column(children: <Widget>[
+          new CardComida(),
+          new CardComidaTwo(),
+        ]),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
