@@ -3,6 +3,9 @@ import 'Receita.dart';
 
 //ARRUMAR O COD. PRA NÃO FICAR REPETITIVO
 class FoodCard extends StatelessWidget {
+
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -11,7 +14,7 @@ class FoodCard extends StatelessWidget {
           borderRadius: new BorderRadius.circular(15.0),
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ReceitaPanqueca()));
+                MaterialPageRoute(builder: (context) => Receita()));
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -40,6 +43,8 @@ class FoodCard extends StatelessWidget {
     );
   }
 }
+
+
 
 class FoodCardTwo extends StatelessWidget {
   @override

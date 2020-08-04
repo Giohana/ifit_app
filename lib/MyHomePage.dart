@@ -17,18 +17,23 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomAppBar(
-       child: Row(
+          child: Row(
         children: [
           Spacer(),
+          IconButton(
+              icon: Icon(Icons.bookmark),
+              onPressed: () {})
+        ],
+      )),
+      appBar: AppBar(
+        title: Text(widget.title),
+        actions: <Widget>[
           IconButton(
               icon: Icon(Icons.search),
               onPressed: () {
                 debugPrint('botão pesquisar');
               }),
         ],
-      )),
-      appBar: AppBar(
-        title: Text(widget.title),
       ),
       drawer: Drawer(
         child: NewDrawer(),

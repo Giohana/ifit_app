@@ -40,6 +40,7 @@ class NewReceita extends StatelessWidget {
                 width: 300,
                 alignment: Alignment.centerRight,
                 child: TextFormField(
+                  
                   decoration: const InputDecoration(
                     labelText: 'Ingredientes:',
                     hintText: 'Ex. 1 xícara de farinha.',

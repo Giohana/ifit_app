@@ -3,23 +3,32 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:share/share.dart';
 
 //ARRUMAR O COD. PRA NÃO FICAR REPETITIVO
-class ReceitaPanqueca extends StatelessWidget {
+class Receita extends StatelessWidget {
+  /*String nomeReceita;
+  String rota;
+  String imagem;  
+  String receitaIngredientes;
+  String modoPreparo;
+Receita({this.nomeReceita, this.rota,this.imagem, this.receitaIngredientes, this.modoPreparo});*/
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Panqueca Integral"),
+        title: Text('Panqueca Integral'),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.share),
             onPressed: () {
-              Share.share(
-                  "Receita: Panqueca Integral -> 'https://www.tudogostoso.com.br/receita/160760-massa-de-panqueca-com-farinha-integral.html'");
+              Share.share("Receita: Panqueca Integral -> 'https://www.tudogostoso.com.br/receita/160760-massa-de-panqueca-com-farinha-integral.html'");
             },
           ),
           IconButton(
             icon: Icon(Icons.delete),
-            onPressed: () {},
+            onPressed: () {
+              
+            },
           ),
         ],
       ),
@@ -89,6 +98,7 @@ class ReceitaPanqueca extends StatelessWidget {
     );
   }
 }
+
 
 class ReceitaBoloBanana extends StatelessWidget {
   @override

@@ -16,11 +16,13 @@ class CardComida extends StatelessWidget {
         children: <Widget>[
           FoodCard(),
           foodImage,
+
         ],
       ),
     );
   }
 }
+
 
 class CardComidaTwo extends StatelessWidget {
   @override
